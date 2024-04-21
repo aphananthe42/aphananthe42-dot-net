@@ -1,16 +1,42 @@
 ---
-
+import "@fontsource/roboto";
+import "@fontsource-variable/noto-sans-jp";
+import { Image } from "astro:assets";
+import moguraImage from "../images/mogura.png";
 ---
 
-<html lang="en">
+<html lang="ja">
 	<head>
 		<meta charset="utf-8" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
+		<title>aphananhe42.net</title>
+		<style>
+			.english {
+				font-family: "Roboto", sans-serif;
+				text-align: center;
+			}
+			.japanese {
+				font-family: "Noto Sans JP Variable", sans-serif;
+				text-align: center;
+			}
+			.mogura {
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
+		</style>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1 class="english">This site is under development...</h1>
+		<h1 class="japanese">このサイトは現在開発中です...</h1>
+		<Image
+			class="mogura"
+			src={moguraImage}
+			alt="モグラの画像"
+			width="231"
+			height="231"
+		/>
 	</body>
 </html>
