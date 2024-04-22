@@ -12,23 +12,18 @@ import moguraImage from "../images/mogura.png";
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>aphananhe42.net</title>
-		<style>
-			.mogura {
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		</style>
 	</head>
 	<body>
-		<h1 class="font-roboto">This site is under development...</h1>
-		<h1 class="font-notosansjp">このサイトは現在開発中です...</h1>
+		<h1 class="font-roboto text-4xl text-center pt-8">
+			This site is under development...
+		</h1>
+		<h1 class="font-notosansjp text-4xl text-center">
+			このサイトは現在開発中です...
+		</h1>
 		<Image
-			class="mogura"
+			class="w-1/3 h-1/3 mx-auto"
 			src={moguraImage}
 			alt="モグラの画像"
-			width="231"
-			height="231"
 		/>
 	</body>
 </html>
