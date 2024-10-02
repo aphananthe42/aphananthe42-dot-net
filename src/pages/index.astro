@@ -1,13 +1,13 @@
 ---
 import "@fontsource/roboto/400.css";
 import "@fontsource/roboto/700.css";
+import "@fontsource/roboto/900.css";
 import { Image } from "astro:assets";
 import MainIcon from "../images/main_icon.png";
 import GithubIcon from "../images/github_icon.svg";
 import XIcon from "../images/x_icon.svg";
 import ZennIcon from "../images/zenn_icon.svg";
 import AtCoderIcon from "../images/atcoder_icon.png";
-import Aphananthe42DotNetCard from "../images/aphananthe42_dot_net_card.png";
 ---
 
 <html lang="ja">
@@ -90,7 +90,7 @@ import Aphananthe42DotNetCard from "../images/aphananthe42_dot_net_card.png";
 			</button>
 		</div>
 		<div class="w-3/4 mx-auto mt-10">
-			<p class="text-white text-xl font-roboto font-bold">About Me</p>
+			<p class="text-white text-xl font-roboto font-black">About Me</p>
 			<div class="border border-green-500 rounded-md p-4 mt-4">
 				<div class="text-white text-md font-roboto leading-relaxed">
 					$ whois aphananthe42 <br />
@@ -132,13 +132,37 @@ import Aphananthe42DotNetCard from "../images/aphananthe42_dot_net_card.png";
 				</div>
 			</div>
 		</div>
-		<div class="w-3/4 mx-auto mt-10">
-			<p class="text-white text-xl font-roboto font-bold">Works</p>
-			<Image
-				class="w-3/5 mt-6"
-				src={Aphananthe42DotNetCard}
-				alt="aphananthe42.netのカード"
-			/>
+		<div class="w-3/4 mx-auto mt-10 text-white">
+			<p class="text-xl font-roboto font-black">Works</p>
+			<ul class="list-disc ml-4">
+				<li>
+					<a href="https://aphananthe42.net" target="_blank">
+						<p
+							class="text-lg text-blue-600 mt-4 font-roboto font-bold"
+						>
+							aphananthe42.net
+						</p>
+					</a>
+				</li>
+			</ul>
+			<p class="text-md mt-1 ml-4 font-roboto italic">
+				That's this. <br />
+				aphananthe42.net is my personal website.
+			</p>
+			<ul class="list-disc ml-4">
+				<li>
+					<a href="" target="_blank">
+						<p
+							class="text-lg text-blue-600 mt-4 font-roboto font-bold"
+						>
+							AIFrame
+						</p>
+					</a>
+				</li>
+			</ul>
+			<p class="text-md mt-1 ml-4 font-roboto italic">
+				Under development...
+			</p>
 		</div>
 	</body>
 </html>
