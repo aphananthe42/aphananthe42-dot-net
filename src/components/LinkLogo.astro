@@ -1,0 +1,35 @@
+---
+import { Image } from "astro:assets";
+import GithubIcon from "../images/github_icon.svg";
+import XIcon from "../images/x_icon.svg";
+import ZennIcon from "../images/zenn_icon.svg";
+import AtCoderIcon from "../images/atcoder_icon.png";
+
+type LinkType = "GitHub" | "X" | "Zenn" | "AtCoder";
+interface Props {
+    href: string;
+    linkType: LinkType;
+}
+
+const { href, linkType } = Astro.props;
+const icon = (() => {
+    switch (linkType) {
+        case "GitHub":
+            return GithubIcon;
+        case "X":
+            return XIcon;
+        case "Zenn":
+            return ZennIcon;
+        case "AtCoder":
+            return AtCoderIcon;
+    }
+})();
+---
+
+<a href={href} target="_blank" class="inline-block">
+    <Image
+        class="w-9 2xl:w-16 aspect-square"
+        src={icon}
+        alt={`${linkType}のアイコン`}
+    />
+</a>

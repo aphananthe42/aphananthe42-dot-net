@@ -4,13 +4,10 @@ import "@fontsource/roboto/700.css";
 import "@fontsource/roboto/900.css";
 import { Image } from "astro:assets";
 import MainIcon from "../images/main_icon.png";
-import GithubIcon from "../images/github_icon.svg";
-import XIcon from "../images/x_icon.svg";
-import ZennIcon from "../images/zenn_icon.svg";
-import AtCoderIcon from "../images/atcoder_icon.png";
 import CloudflareIcon from "../images/cloudflare.svg";
 import AstroIcon from "../images/astro.svg";
 import TailwindCSSIcon from "../images/tailwindcss.svg";
+import LinkLogo from "../components/LinkLogo.astro";
 ---
 
 <html lang="ja">
@@ -33,50 +30,16 @@ import TailwindCSSIcon from "../images/tailwindcss.svg";
 			aphananthe42
 		</h1>
 		<div class="flex justify-center gap-6 mt-6">
-			<a
+			<LinkLogo
 				href="https://github.com/aphananthe42"
-				target="_blank"
-				class="inline-block"
-			>
-				<Image
-					class="w-9 2xl:w-16 aspect-square"
-					src={GithubIcon}
-					alt="GitHubのアイコン"
-				/>
-			</a>
-			<a
-				href="https://x.com/aphananthe42"
-				target="_blank"
-				class="inline-block"
-			>
-				<Image
-					class="w-9 2xl:w-16 aspect-square"
-					src={XIcon}
-					alt="Xのアイコン"
-				/>
-			</a>
-			<a
-				href="https://zenn.dev/aphananthe42"
-				target="_blank"
-				class="inline-block"
-			>
-				<Image
-					class="w-9 2xl:w-16 aspect-square"
-					src={ZennIcon}
-					alt="Zennのアイコン"
-				/>
-			</a>
-			<a
+				linkType="GitHub"
+			/>
+			<LinkLogo href="https://x.com/aphananthe42" linkType="X" />
+			<LinkLogo href="https://zenn.dev/aphananthe42" linkType="Zenn" />
+			<LinkLogo
 				href="https://atcoder.jp/users/aphananthe42"
-				target="_blank"
-				class="inline-block"
-			>
-				<Image
-					class="w-9 2xl:w-16 aspect-square"
-					src={AtCoderIcon}
-					alt="AtCoderのアイコン"
-				/>
-			</a>
+				linkType="AtCoder"
+			/>
 		</div>
 		<div class="flex justify-center gap-3 mt-8">
 			<button
