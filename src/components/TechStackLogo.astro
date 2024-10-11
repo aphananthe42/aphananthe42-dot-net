@@ -1,0 +1,32 @@
+---
+import { Image } from "astro:assets";
+import CloudflareIcon from "../images/cloudflare.svg";
+import AstroIcon from "../images/astro.svg";
+import TailwindCSSIcon from "../images/tailwindcss.svg";
+
+type LinkType = "Cloudflare" | "Astro" | "TailwindCSS";
+interface Props {
+    href: string;
+    linkType: LinkType;
+}
+
+const { href, linkType } = Astro.props;
+const icon = (() => {
+    switch (linkType) {
+        case "Cloudflare":
+            return CloudflareIcon;
+        case "Astro":
+            return AstroIcon;
+        case "TailwindCSS":
+            return TailwindCSSIcon;
+    }
+})();
+---
+
+<a href={href} target="_blank" class="inline-block">
+    <Image
+        class="w-7 2xl:w-14 aspect-square"
+        src={icon}
+        alt={`${linkType}のアイコン`}
+    />
+</a>
