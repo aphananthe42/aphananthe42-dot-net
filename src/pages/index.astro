@@ -5,6 +5,7 @@ import CloudflareIcon from "../images/cloudflare.svg";
 import AstroIcon from "../images/astro.svg";
 import TailwindCSSIcon from "../images/tailwindcss.svg";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import SectionLayout from "../layouts/SectionLayout.astro";
 import LinkLogo from "../components/LinkLogo.astro";
 import GradientBorderButton from "../components/GradientBorderButton.astro";
 import TerminalStyleList from "../components/TerminalStyleList.astro";
@@ -46,8 +47,7 @@ import TerminalStyleList from "../components/TerminalStyleList.astro";
 			darkColor="ring-purple-800"
 		/>
 	</div>
-	<div class="w-3/4 mx-auto mt-10">
-		<p class="text-white text-xl font-roboto font-black">About Me</p>
+	<SectionLayout title="About Me">
 		<TerminalStyleList command="$ whois aphananthe42" listStyle="list-none">
 			<li>Name: aphananthe42</li>
 			<li>Created: 1994-12-04</li>
@@ -76,10 +76,9 @@ import TerminalStyleList from "../components/TerminalStyleList.astro";
 			</li>
 			<li>Freelance iOS Engineer (current)</li>
 		</TerminalStyleList>
-	</div>
-	<div class="w-3/4 mx-auto mt-10 text-white">
-		<p class="text-xl font-roboto font-black">Works</p>
-		<ul class="list-disc ml-4">
+	</SectionLayout>
+	<SectionLayout title="Works">
+		<ul class="list-disc marker:text-white ml-4">
 			<li>
 				<a href="https://aphananthe42.net" target="_blank">
 					<p class="text-lg text-blue-600 mt-4 font-roboto font-bold">
@@ -88,7 +87,7 @@ import TerminalStyleList from "../components/TerminalStyleList.astro";
 				</a>
 			</li>
 		</ul>
-		<p class="text-md mt-1 ml-4 font-roboto font-normal italic">
+		<p class="text-md text-white mt-1 ml-4 font-roboto font-normal italic">
 			That's this. <br />
 			aphananthe42.net is my personal website.
 		</p>
@@ -123,7 +122,7 @@ import TerminalStyleList from "../components/TerminalStyleList.astro";
 				/>
 			</a>
 		</div>
-		<ul class="list-disc ml-4">
+		<ul class="list-disc marker:text-white ml-4">
 			<li>
 				<a href="https://google.com" target="_blank">
 					<p class="text-lg text-blue-600 mt-4 font-roboto font-bold">
@@ -132,14 +131,15 @@ import TerminalStyleList from "../components/TerminalStyleList.astro";
 				</a>
 			</li>
 		</ul>
-		<p class="text-md mt-1 ml-4 font-roboto italic">Under development...</p>
-	</div>
-	<div class="w-3/4 mx-auto mt-10 text-white">
-		<p class="text-xl font-roboto font-black">Contact</p>
-		<p class="text-md font-roboto font-normal italic mt-4">
+		<p class="text-md text-white mt-1 ml-4 font-roboto italic">
+			Under development...
+		</p>
+	</SectionLayout>
+	<SectionLayout title="Contact">
+		<p class="text-md text-white font-roboto font-normal italic mt-4">
 			Please contact me via DM on X or through a PGP-encrypted email.
 		</p>
-	</div>
+	</SectionLayout>
 	<hr class="mt-10" />
 	<div class="p-6">
 		<p class="text-center text-white text-sm font-roboto font-normal">
