@@ -6,8 +6,10 @@ interface Props {
 const { command, listStyle } = Astro.props;
 ---
 
-<div class="border border-green-500 rounded-md p-4 mt-4">
-    <div class="text-white text-md font-roboto font-normal leading-relaxed">
+<div class="border border-green-500 rounded-md p-4 mt-4 lg:mt-8">
+    <div
+        class="text-white text-md lg:text-xl font-roboto font-normal leading-relaxed"
+    >
         <p>{command}</p>
         <ul class={`${listStyle} list-inside space-y-1 mt-4`}>
             <slot />

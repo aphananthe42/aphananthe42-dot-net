@@ -8,13 +8,15 @@ const { title, href } = Astro.props;
 ---
 
 <a href={href} target="_blank">
-    <p class="text-lg text-blue-600 mt-4 font-roboto font-bold">
+    <p class="text-lg lg:text-2xl text-blue-600 mt-4 font-roboto font-bold">
         {title}
     </p>
 </a>
-<p class="text-md text-white mt-1 font-roboto font-normal italic">
+<p
+    class="text-md lg:text-xl text-white mt-1 lg:mt-3 font-roboto font-normal italic"
+>
     <slot name="description" />
 </p>
-<div class="flex gap-3 mt-2">
+<div class="flex gap-3 lg:gap-6 mt-2 lg:mt-4">
     <slot name="tech-stacks" />
 </div>
