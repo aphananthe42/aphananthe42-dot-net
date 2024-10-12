@@ -6,6 +6,7 @@ import SectionLayout from "../layouts/SectionLayout.astro";
 import LinkLogo from "../components/LinkLogo.astro";
 import GradientBorderButton from "../components/GradientBorderButton.astro";
 import TerminalStyleList from "../components/TerminalStyleList.astro";
+import WorkShowcase from "../components/WorkShowcase.astro";
 import TechStackLogo from "../components/TechStackLogo.astro";
 ---
 
@@ -78,41 +79,37 @@ import TechStackLogo from "../components/TechStackLogo.astro";
 	<SectionLayout title="Works">
 		<ul class="list-disc marker:text-white ml-4">
 			<li>
-				<a href="https://aphananthe42.net" target="_blank">
-					<p class="text-lg text-blue-600 mt-4 font-roboto font-bold">
-						aphananthe42.net
-					</p>
-				</a>
-				<p
-					class="text-md text-white mt-1 font-roboto font-normal italic"
+				<WorkShowcase
+					title="aphananthe42.net"
+					href="https://aphananthe42.net"
 				>
-					That's this. <br />
-					aphananthe42.net is my personal website.
-				</p>
-				<div class="flex gap-3 mt-2">
-					<TechStackLogo
-						href="https://www.cloudflare.com"
-						linkType="Cloudflare"
-					/>
-					<TechStackLogo
-						href="https://astro.build"
-						linkType="Astro"
-					/>
-					<TechStackLogo
-						href="https://tailwindcss.com"
-						linkType="TailwindCSS"
-					/>
-				</div>
+					<Fragment slot="description">
+						That's this. <br />
+						aphananthe42.net is my personal website.
+					</Fragment>
+					<Fragment slot="tech-stacks">
+						<TechStackLogo
+							href="https://www.cloudflare.com"
+							linkType="Cloudflare"
+						/>
+						<TechStackLogo
+							href="https://astro.build"
+							linkType="Astro"
+						/>
+						<TechStackLogo
+							href="https://tailwindcss.com"
+							linkType="TailwindCSS"
+						/>
+					</Fragment>
+				</WorkShowcase>
 			</li>
 			<li>
-				<a href="https://google.com" target="_blank">
-					<p class="text-lg text-blue-600 mt-4 font-roboto font-bold">
-						AIFrame
-					</p>
-				</a>
-				<p class="text-md text-white mt-1 font-roboto italic">
-					Under development...
-				</p>
+				<WorkShowcase title="AIFrame" href="https://google.com">
+					<Fragment slot="description">
+						Under development...
+					</Fragment>
+					<Fragment slot="tech-stacks"> </Fragment>
+				</WorkShowcase>
 			</li>
 		</ul>
 	</SectionLayout>

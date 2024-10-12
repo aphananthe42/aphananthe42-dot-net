@@ -1,0 +1,20 @@
+---
+interface Props {
+    title: string;
+    href: string;
+}
+
+const { title, href } = Astro.props;
+---
+
+<a href={href} target="_blank">
+    <p class="text-lg text-blue-600 mt-4 font-roboto font-bold">
+        {title}
+    </p>
+</a>
+<p class="text-md text-white mt-1 font-roboto font-normal italic">
+    <slot name="description" />
+</p>
+<div class="flex gap-3 mt-2">
+    <slot name="tech-stacks" />
+</div>
