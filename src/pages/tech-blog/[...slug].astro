@@ -26,7 +26,7 @@ const { Content } = await entry.render();
         <div class="mt-4 text-right">
             {
                 entry.data.tags.map((tag: string) => (
-                    <span class="bg-blue-200 rounded-full mx-0.5">
+                    <span class="inline-block bg-blue-200 rounded-full mx-0.5 mb-1">
                         <span class="text-black px-2">{tag}</span>
                     </span>
                 ))
