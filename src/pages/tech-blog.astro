@@ -12,8 +12,9 @@ const techBlogEntries = await getCollection("tech-blog");
     >
         Tech Blog
     </h1>
-    <div class="h-1 bg-gradient-to-r from-purple-600 to-blue-500 mt-4"></div>
-    <div class="font-notosansjp px-6 my-10">
+    <div class="h-1 bg-gradient-to-r from-purple-600 to-blue-500 mt-4 lg:mt-8">
+    </div>
+    <div class="w-3/4 xl:w-2/5 mx-auto font-notosansjp px-6 my-10">
         {
             techBlogEntries.map((entry) => (
                 <div class="border border-white rounded-xl p-3 mt-4">
