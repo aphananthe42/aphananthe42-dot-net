@@ -7,7 +7,7 @@ export default {
 		extend: {
 			fontFamily: {
 				roboto: ['Roboto', ...defaultTheme.fontFamily.serif],
-				notosansjp: ['Noto Sans JP Variable', ...defaultTheme.fontFamily.serif],
+				notosansjp: ['Noto Sans JP', ...defaultTheme.fontFamily.serif],
 			},
 		},
 	},
