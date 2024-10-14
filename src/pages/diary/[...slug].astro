@@ -1,7 +1,7 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import Prose from "../../components/Prose.astro";
+import EntryLayout from "../../layouts/EntryLayout.astro";
 import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
@@ -17,18 +17,16 @@ const { Content } = await entry.render();
 ---
 
 <BaseLayout>
-    <div class="xl:w-2/5 mx-auto font-notosansjp px-6 my-10">
-        <h1
-            class="text-white text-2xl lg:text-4xl text-center font-bold mt-9 lg:mt-20"
-        >
+    <EntryLayout>
+        <Fragment slot="title">
             {entry.data.title}
-        </h1>
-        <p class="text-white mt-2 text-right">
+        </Fragment>
+        <Fragment slot="date">
             {entry.data.date.toISOString().slice(0, 10)}
-        </p>
-        <Prose>
+        </Fragment>
+        <Fragment slot="content">
             <Content />
-        </Prose>
-    </div>
+        </Fragment>
+    </EntryLayout>
     <Footer />
 </BaseLayout>

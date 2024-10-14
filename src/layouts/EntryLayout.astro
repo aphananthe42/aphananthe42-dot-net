@@ -1,0 +1,20 @@
+---
+import Prose from "../components/Prose.astro";
+---
+
+<div class="xl:w-2/5 mx-auto font-notosansjp px-6 my-10">
+    <h1
+        class="text-white text-2xl lg:text-4xl text-center font-bold mt-9 lg:mt-20"
+    >
+        <slot name="title" />
+    </h1>
+    <div class="mt-4 text-right">
+        <slot name="tags" />
+    </div>
+    <p class="text-white mt-2 text-right">
+        <slot name="date" />
+    </p>
+    <Prose>
+        <slot name="content" />
+    </Prose>
+</div>

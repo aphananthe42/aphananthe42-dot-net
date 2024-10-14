@@ -1,20 +1,18 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import EntryListLayout from "../layouts/EntryListLayout.astro";
 import Footer from "../components/Footer.astro";
 
 const diaryEntries = await getCollection("diary");
 ---
 
 <BaseLayout>
-    <h1
-        class="text-white text-3xl lg:text-6xl text-center font-roboto font-bold mt-9 lg:mt-20"
+    <EntryListLayout
+        title="Diary"
+        startColor="from-purple-500"
+        endColor="to-pink-500"
     >
-        Diary
-    </h1>
-    <div class="h-1 bg-gradient-to-r from-purple-500 to-pink-500 mt-4 lg:mt-8">
-    </div>
-    <div class="xl:w-2/5 mx-auto font-notosansjp px-6 my-10">
         {
             diaryEntries.map((entry) => (
                 <div class="border border-white rounded-xl p-3 mt-4">
@@ -27,6 +25,6 @@ const diaryEntries = await getCollection("diary");
                 </div>
             ))
         }
-    </div>
+    </EntryListLayout>
     <Footer />
 </BaseLayout>

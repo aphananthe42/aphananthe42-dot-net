@@ -1,20 +1,18 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
+import EntryListLayout from "../layouts/EntryListLayout.astro";
 import Footer from "../components/Footer.astro";
 
 const techBlogEntries = await getCollection("tech-blog");
 ---
 
 <BaseLayout>
-    <h1
-        class="text-white text-3xl lg:text-6xl text-center font-roboto font-bold mt-9 lg:mt-20"
+    <EntryListLayout
+        title="Tech Blog"
+        startColor="from-purple-600"
+        endColor="to-blue-500"
     >
-        Tech Blog
-    </h1>
-    <div class="h-1 bg-gradient-to-r from-purple-600 to-blue-500 mt-4 lg:mt-8">
-    </div>
-    <div class="xl:w-2/5 mx-auto font-notosansjp px-6 my-10">
         {
             techBlogEntries.map((entry) => (
                 <div class="border border-white rounded-xl p-3 mt-4">
@@ -34,6 +32,6 @@ const techBlogEntries = await getCollection("tech-blog");
                 </div>
             ))
         }
-    </div>
+    </EntryListLayout>
     <Footer />
 </BaseLayout>
