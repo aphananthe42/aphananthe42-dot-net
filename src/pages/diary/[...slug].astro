@@ -5,8 +5,8 @@ import Prose from "../../components/Prose.astro";
 import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
-    const techBlogEntries = await getCollection("tech-blog");
-    return techBlogEntries.map((entry) => ({
+    const diaryEntries = await getCollection("diary");
+    return diaryEntries.map((entry) => ({
         params: { slug: entry.slug },
         props: { entry },
     }));
@@ -23,15 +23,6 @@ const { Content } = await entry.render();
         >
             {entry.data.title}
         </h1>
-        <div class="mt-4 text-right">
-            {
-                entry.data.tags.map((tag: string) => (
-                    <span class="inline-block bg-blue-200 rounded-full mx-0.5 mb-1">
-                        <span class="text-black px-2">{tag}</span>
-                    </span>
-                ))
-            }
-        </div>
         <p class="text-white mt-2 text-right">
             {entry.data.date.toISOString().slice(0, 10)}
         </p>
