@@ -53,10 +53,10 @@ import Footer from "../components/Footer.astro";
 		<TerminalStyleList command="$ whois aphananthe42" listStyle="list-none">
 			<li>Name: aphananthe42</li>
 			<li>Created: 1994-12-04</li>
-			<li>Address: Kanagawa, Japan</li>
 			<li>Job: Freelance iOS Engineer</li>
-			<li>ETH Address: ...</li>
-			<li>PGP Key: ...</li>
+			<li>Physical address: Kanagawa, Japan</li>
+			<li>Email address: contact@aphananthe42.net</li>
+			<li>ETH Address: 0x55313023F2E478e5FeB69CBd93F789040F533869</li>
 			<li>Favorite Food: miso soup, salad, dried persimmon</li>
 		</TerminalStyleList>
 		<TerminalStyleList command="$ ls skills/" listStyle="list-disc">
@@ -120,7 +120,13 @@ import Footer from "../components/Footer.astro";
 		<p
 			class="text-md lg:text-xl text-white font-roboto font-normal italic mt-4"
 		>
-			Please contact me via DM on X or through a PGP-encrypted email.
+			Feel free to contact me via
+			<a href="https://x.com/aphananthe42">
+				<span class="text-blue-600">DM on X</span>
+			</a> or
+			<a href="mailto:contact@aphananthe42.net">
+				<span class="text-blue-600"> email</span>
+			</a>.
 		</p>
 	</SectionLayout>
 	<Footer />
