@@ -1,0 +1,29 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+import Footer from "../components/Footer.astro";
+
+const pgpPublicKey = `
+-----BEGIN PGP PUBLIC KEY BLOCK-----
+
+mDMEZxMXfxYJKwYBBAHaRw8BAQdA8mOq5ma7hgxWsHEE0HA8Jcf+PVyKGMAK5cW8
+1++UUU20J2FwaGFuYW50aGU0MiA8Y29udGFjdEBhcGhhbmFudGhlNDIubmV0PoiT
+BBMWCgA7FiEEA0s6Qn/8fiNYdnoCMGYy+DfL7ggFAmcTF38CGwMFCwkIBwICIgIG
+FQoJCAsCBBYCAwECHgcCF4AACgkQMGYy+DfL7ggV0wD/cxmM9szynMwnsr75o/WH
+fPfOJMFgs4u7VCR5lBhh0JoBAIaukR7X+1bBU4O2LziTQP4bGV29jY3Mqf2CzNW9
+wjEJuDgEZxMXfxIKKwYBBAGXVQEFAQEHQOpwc40khXf0k9fyL6/OVc7JOoglPQbN
+HHvNLjJSgH4AAwEIB4h4BBgWCgAgFiEEA0s6Qn/8fiNYdnoCMGYy+DfL7ggFAmcT
+F38CGwwACgkQMGYy+DfL7giIpAEAo1p0FY1rKWEjoLElCZDQKtuZvmzMMKKJzJuj
+GIOlluQA/2mptkkJAVtUBq4xFH5bY6zE1gye9TQnvqPJSRpRDLMP=Iqzi
+-----END PGP PUBLIC KEY BLOCK-----
+`;
+---
+
+<BaseLayout>
+    <div class="w-3/4 xl:w-2/5 mx-auto mt-10 lg:mt-20">
+        <pre
+            class="text-white text-sm break-words whitespace-pre-wrap">
+            {pgpPublicKey}
+        </pre>
+    </div>
+    <Footer />
+</BaseLayout>

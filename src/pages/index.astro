@@ -115,17 +115,24 @@ import Footer from "../components/Footer.astro";
 		</ul>
 	</SectionLayout>
 	<SectionLayout title="Contact">
-		<p
+		<div
 			class="text-md lg:text-xl text-white font-roboto font-normal italic mt-4"
 		>
-			Feel free to contact me via
-			<a href="https://x.com/aphananthe42">
-				<span class="text-blue-600">DM on X</span>
-			</a> or
-			<a href="mailto:contact@aphananthe42.net">
-				<span class="text-blue-600"> email</span>
-			</a>.
-		</p>
+			<p>
+				Feel free to contact me via
+				<a href="https://x.com/aphananthe42" class="text-blue-600">
+					DM on X
+				</a> or
+				<a href="mailto:contact@aphananthe42.net" class="text-blue-600">
+					email
+				</a>.
+			</p>
+			<p>
+				PGP Key is
+				<a href="/pgp" class="text-blue-600">here</a>
+				.
+			</p>
+		</div>
 	</SectionLayout>
 	<Footer />
 </BaseLayout>
