@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import EntryListLayout from "../layouts/EntryListLayout.astro";
-import Footer from "../components/Footer.astro";
 
 const diaryEntries = await getCollection("diary");
 ---
@@ -26,5 +25,4 @@ const diaryEntries = await getCollection("diary");
             ))
         }
     </EntryListLayout>
-    <Footer />
 </BaseLayout>

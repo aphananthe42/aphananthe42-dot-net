@@ -2,7 +2,6 @@
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import EntryLayout from "../../layouts/EntryLayout.astro";
-import Footer from "../../components/Footer.astro";
 
 export async function getStaticPaths() {
     const techBlogEntries = await getCollection("tech-blog");
@@ -37,5 +36,4 @@ const { Content } = await entry.render();
             <Content />
         </Fragment>
     </EntryLayout>
-    <Footer />
 </BaseLayout>
