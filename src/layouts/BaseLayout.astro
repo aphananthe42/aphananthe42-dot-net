@@ -31,7 +31,7 @@ const websiteTitle = "aphananthe42.net";
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@aphananthe42" />
     </head>
-    <body class="w-screen h-screen bg-slate-950">
+    <body class="w-screen min-h-screen flex flex-col bg-slate-950">
         <header>
             <div class="p-3">
                 <a href="/" class="text-white font-roboto font-bold">
@@ -39,7 +39,7 @@ const websiteTitle = "aphananthe42.net";
                 </a>
             </div>
         </header>
-        <main>
+        <main class="flex-grow">
             <slot />
         </main>
         <footer class="h-14 mt-10 lg:mt-20 mb-0">
