@@ -1,6 +1,7 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
 
+const pgpFingerprint = "034B 3A42 7FFC 7E23 5876 7A02 3066 32F8 37CB EE08";
 const pgpPublicKey = `
 -----BEGIN PGP PUBLIC KEY BLOCK-----
 
@@ -19,6 +20,10 @@ GIOlluQA/2mptkkJAVtUBq4xFH5bY6zE1gye9TQnvqPJSRpRDLMP=Iqzi
 
 <BaseLayout>
     <div class="w-3/4 xl:w-2/5 mx-auto mt-10 lg:mt-20">
+        <p class="text-white text-sm">
+            {pgpFingerprint}
+        </p>
+        <hr class="my-6" />
         <pre
             class="text-white text-sm break-words whitespace-pre-wrap">
             {pgpPublicKey}
