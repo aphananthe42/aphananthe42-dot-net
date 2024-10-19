@@ -4,17 +4,14 @@ interface Props {
     title: string;
     startColor: string;
     endColor: string;
-    focusColor: string;
-    darkColor: string;
 }
 
-const { routing, title, startColor, endColor, focusColor, darkColor } =
-    Astro.props;
+const { routing, title, startColor, endColor } = Astro.props;
 ---
 
 <a href={routing}>
     <button
-        class={`relative w-[120px] lg:w-[240px] inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-white text-base lg:text-2xl font-normal font-roboto rounded-lg group bg-gradient-to-br ${startColor} ${endColor} group-hover:${startColor} group-hover:${endColor} hover:text-white dark:text-white focus:ring-4 focus:outline-none focus:${focusColor} dark:focus:${darkColor}`}
+        class={`relative w-[120px] lg:w-[240px] inline-flex items-center justify-center p-0.5 mb-2 me-2 overflow-hidden text-white text-base lg:text-2xl font-normal font-roboto rounded-lg group bg-gradient-to-br ${startColor} ${endColor} group-hover:${startColor} group-hover:${endColor} hover:text-white dark:text-white`}
     >
         <span
             class="relative w-[120px] lg:w-[240px] px-5 py-2.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"
