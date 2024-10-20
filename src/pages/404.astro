@@ -4,11 +4,38 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 
 <BaseLayout>
     <div class="flex flex-col items-center justify-center h-screen">
-        <h1 class="text-white text-6xl font-roboto font-bold">404</h1>
-        <a href="/">
-            <p class="text-blue-500 text-xl font-notosansjp mt-4">
+        <h1 id="http-status" class="text-white text-6xl font-roboto font-bold">
+            404
+        </h1>
+        <a href="/" id="link-destination">
+            <p
+                id="link-title"
+                class="text-blue-500 text-xl font-notosansjp mt-4"
+            >
                 Back to Top
             </p>
         </a>
+
+        <script>
+            const httpStatus = document.getElementById("http-status");
+            const linkTitle = document.getElementById("link-title");
+            const linkDestination = document.getElementById("link-destination");
+            setTimeout(() => {
+                if (
+                    httpStatus !== null &&
+                    linkTitle != null &&
+                    linkDestination !== null
+                ) {
+                    httpStatus.classList.add("animate-text-focus-in");
+                    linkTitle.classList.add("animate-text-focus-in");
+                    httpStatus.textContent = "42";
+                    linkTitle.textContent = "Go to 42";
+                    linkDestination.setAttribute(
+                        "href",
+                        "https://www.google.com/search?q=Answer+to+the+Ultimate+Question+of+Life%2C+the+Universe%2C+and+Everything",
+                    );
+                }
+            }, 42000);
+        </script>
     </div>
 </BaseLayout>
