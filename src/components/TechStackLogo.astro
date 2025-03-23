@@ -5,9 +5,8 @@ import TypeScriptIcon from "../images/typescript.svg";
 import TailwindCSSIcon from "../images/tailwindcss.svg";
 import CloudflareIcon from "../images/cloudflare.svg";
 import SwiftIcon from "../images/swift.svg";
-import XcodeIcon from "../images/xcode.svg";
 
-type LinkType = "Astro" | "TypeScript" | "TailwindCSS" | "Cloudflare" | "Swift" | "Xcode";
+type LinkType = "Astro" | "TypeScript" | "TailwindCSS" | "Cloudflare" | "Swift";
 interface Props {
     href: string;
     linkType: LinkType;
@@ -26,8 +25,6 @@ const icon = (() => {
             return CloudflareIcon;
         case "Swift":
             return SwiftIcon;
-        case "Xcode":
-            return XcodeIcon;
     }
 })();
 ---
