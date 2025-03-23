@@ -1,10 +1,13 @@
 ---
 import { Image } from "astro:assets";
-import CloudflareIcon from "../images/cloudflare.svg";
 import AstroIcon from "../images/astro.svg";
+import TypeScriptIcon from "../images/typescript.svg";
 import TailwindCSSIcon from "../images/tailwindcss.svg";
+import CloudflareIcon from "../images/cloudflare.svg";
+import SwiftIcon from "../images/swift.svg";
+import SwiftUIIcon from "../images/swiftui.svg";
 
-type LinkType = "Cloudflare" | "Astro" | "TailwindCSS";
+type LinkType = "Astro" | "TypeScript" | "TailwindCSS" | "Cloudflare" | "Swift" | "SwiftUI";
 interface Props {
     href: string;
     linkType: LinkType;
@@ -13,12 +16,18 @@ interface Props {
 const { href, linkType } = Astro.props;
 const icon = (() => {
     switch (linkType) {
-        case "Cloudflare":
-            return CloudflareIcon;
         case "Astro":
             return AstroIcon;
+        case "TypeScript":
+            return TypeScriptIcon;
         case "TailwindCSS":
             return TailwindCSSIcon;
+        case "Cloudflare":
+            return CloudflareIcon;
+        case "Swift":
+            return SwiftIcon;
+        case "SwiftUI":
+            return SwiftUIIcon;
     }
 })();
 ---
