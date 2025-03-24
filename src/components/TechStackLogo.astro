@@ -16,21 +16,21 @@ const { href, linkType } = Astro.props;
 const icon = (() => {
     switch (linkType) {
         case "Astro":
-            return AstroIcon;
+            return "https://img.shields.io/badge/Astro-white?logo=astro";
         case "TypeScript":
-            return TypeScriptIcon;
+            return "https://img.shields.io/badge/TypeScript-white?logo=typescript";
         case "TailwindCSS":
-            return TailwindCSSIcon;
+            return "https://img.shields.io/badge/TailwindCSS-white?logo=tailwindcss";
         case "Cloudflare":
-            return CloudflareIcon;
+            return "https://img.shields.io/badge/Cloudflare-white?logo=cloudflare";
         case "Swift":
-            return SwiftIcon;
+            return "https://img.shields.io/badge/Swift-white?logo=swift";
     }
 })();
 ---
 
 <a href={href} target="_blank" class="inline-block">
-    <Image
+    <img
         class="w-7 2xl:w-14 aspect-square"
         src={icon}
         alt={`${linkType}のアイコン`}
