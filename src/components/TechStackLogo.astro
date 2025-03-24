@@ -6,7 +6,7 @@ import TailwindCSSIcon from "../images/tailwindcss.svg";
 import CloudflareIcon from "../images/cloudflare.svg";
 import SwiftIcon from "../images/swift.svg";
 
-type LinkType = "Astro" | "TypeScript" | "TailwindCSS" | "Cloudflare" | "Swift";
+type LinkType = "Astro" | "TypeScript" | "TailwindCSS" | "Cloudflare" | "Swift" | "SwiftUI";
 interface Props {
     href: string;
     linkType: LinkType;
@@ -16,22 +16,24 @@ const { href, linkType } = Astro.props;
 const icon = (() => {
     switch (linkType) {
         case "Astro":
-            return "https://img.shields.io/badge/Astro-white?logo=astro&style=flat-square";
+            return "https://img.shields.io/badge/Astro-white?logo=astro&style=for-the-budge";
         case "TypeScript":
-            return "https://img.shields.io/badge/TypeScript-white?logo=typescript&style=flat-square";
+            return "https://img.shields.io/badge/TypeScript-white?logo=typescript&style=for-the-budge";
         case "TailwindCSS":
-            return "https://img.shields.io/badge/TailwindCSS-white?logo=tailwindcss&style=flat-square";
+            return "https://img.shields.io/badge/TailwindCSS-white?logo=tailwindcss&style=for-the-budge";
         case "Cloudflare":
-            return "https://img.shields.io/badge/Cloudflare-white?logo=cloudflare&style=flat-square";
+            return "https://img.shields.io/badge/Cloudflare-white?logo=cloudflare&style=for-the-budge";
         case "Swift":
-            return "https://img.shields.io/badge/Swift-white?logo=swift&style=flat-square";
+            return "https://img.shields.io/badge/Swift-white?logo=swift&style=for-the-budge";
+        case "SwiftUI":
+            return "https://img.shields.io/badge/Swift-white?logo=swift&logoColor=007AFF&style=for-the-budge";
     }
 })();
 ---
 
 <a href={href} target="_blank" class="inline-block">
     <img
-        class="h-3 2xl:h-6 object-contain"
+        class="h-5 2xl:h-10 object-contain"
         src={icon}
         alt={`${linkType}のアイコン`}
     />
