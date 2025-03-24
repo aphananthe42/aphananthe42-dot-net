@@ -1,5 +1,5 @@
 ---
-type LinkType = "Astro" | "TypeScript" | "TailwindCSS" | "Cloudflare" | "Swift" | "XcodeCloud";
+type LinkType = "Astro" | "TypeScript" | "TailwindCSS" | "Cloudflare" | "Swift" | "SwiftUI" | "XcodeCloud";
 interface Props {
     href: string;
     linkType: LinkType;
@@ -9,7 +9,7 @@ const { href, linkType } = Astro.props;
 const icon = (() => {
     switch (linkType) {
         case "Astro":
-            return "https://img.shields.io/badge/Astro-white?logo=astro&style=for-the-budge";
+            return "https://img.shields.io/badge/Astro-gray?logo=astro&style=for-the-budge";
         case "TypeScript":
             return "https://img.shields.io/badge/TypeScript-white?logo=typescript&style=for-the-budge";
         case "TailwindCSS":
@@ -18,6 +18,8 @@ const icon = (() => {
             return "https://img.shields.io/badge/Cloudflare-white?logo=cloudflare&style=for-the-budge";
         case "Swift":
             return "https://img.shields.io/badge/Swift-white?logo=swift&style=for-the-budge";
+        case "SwiftUI":
+            return "https://img.shields.io/badge/SwiftUI-gray?logo=swift&logoColor=0076FF&style=for-the-budge";
         case "XcodeCloud":
             return "https://img.shields.io/badge/Xcode_Cloud-white?logo=xcode&style=for-the-budge";
     }
