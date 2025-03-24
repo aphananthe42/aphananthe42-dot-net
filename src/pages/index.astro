@@ -4,7 +4,6 @@ import MainIcon from "../images/main_icon.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
 import LinkLogo from "../components/LinkLogo.astro";
-import GradientBorderButton from "../components/GradientBorderButton.astro";
 import TerminalStyleList from "../components/TerminalStyleList.astro";
 import WorkShowcase from "../components/WorkShowcase.astro";
 import TechStackLogo from "../components/TechStackLogo.astro";
@@ -30,14 +29,13 @@ import TechStackLogo from "../components/TechStackLogo.astro";
 			linkType="AtCoder"
 		/>
 	</div>
-	<div class="flex justify-center mt-8 lg:mt-16">
-		<GradientBorderButton
-			routing="/diary/"
-			title="Diary"
-			startColor="from-[#b224ef]"
-			endColor="to-[#7579ff]"
-		/>
-	</div>
+	<SectionLayout title="Diary">
+		<a href="/diary/" target="_blank">
+			<p class="text-lg lg:text-2xl text-blue-500 mt-4 font-roboto font-bold">
+				$ cd ~/diary
+			</p>
+		</a>
+	</SectionLayout>
 	<SectionLayout title="About Me">
 		<TerminalStyleList command="$ whois aphananthe42" listStyle="list-none">
 			<li>Name: aphananthe42</li>
