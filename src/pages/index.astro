@@ -11,7 +11,7 @@ import TechStackLogo from "../components/TechStackLogo.astro";
 
 <BaseLayout>
 	<Image
-		class="w-1/3 xl:w-1/6 aspect-square mx-auto mt-20 rounded-full"
+		class="w-1/3 xl:w-1/12 aspect-square mx-auto mt-20 rounded-full"
 		src={MainIcon}
 		alt="aphananthe42のアイコン"
 	/>
@@ -66,58 +66,60 @@ import TechStackLogo from "../components/TechStackLogo.astro";
 		</TerminalStyleList>
 	</SectionLayout>
 	<SectionLayout title="Works">
-		<ul class="list-disc marker:text-white ml-4">
-			<li>
-				<WorkShowcase
-					title="aphananthe42.net"
-					href="https://aphananthe42.net"
-				>
-					<Fragment slot="description">
-						That's this. <br />
-						aphananthe42.net is my personal website.
-					</Fragment>
-					<Fragment slot="tech-stacks">
-						<TechStackLogo
-							href="https://astro.build"
-							linkType="Astro"
-						/>
-						<TechStackLogo
-							href="https://www.typescriptlang.org"
-							linkType="TypeScript"
-						/>
-						<TechStackLogo
-							href="https://tailwindcss.com"
-							linkType="TailwindCSS"
-						/>
-						<TechStackLogo
-							href="https://www.cloudflare.com"
-							linkType="Cloudflare"
-						/>
-					</Fragment>
-				</WorkShowcase>
-			</li>
-			<li>
-				<WorkShowcase title="AI Frame" href="https://apps.apple.com/ja/app/ai-frame-art-on-widget/id6740455268">
-					<Fragment slot="description">
-						iOS App that lets you display AI-generated art on your home screen.
-					</Fragment>
-					<Fragment slot="tech-stacks">
-						<TechStackLogo
-							href="https://developer.apple.com/jp/swift"
-							linkType="Swift"
-						/>
-						<TechStackLogo
-							href="https://developer.apple.com/jp/xcode-cloud"
-							linkType="XcodeCloud"
-						/>
-					</Fragment>
-				</WorkShowcase>
-			</li>
-		</ul>
+		<div class="xl:w-2/4 mx-auto">
+			<ul class="list-disc marker:text-white ml-4">
+				<li>
+					<WorkShowcase
+						title="aphananthe42.net"
+						href="https://aphananthe42.net"
+					>
+						<Fragment slot="description">
+							That's this. <br />
+							aphananthe42.net is my personal website.
+						</Fragment>
+						<Fragment slot="tech-stacks">
+							<TechStackLogo
+								href="https://astro.build"
+								linkType="Astro"
+							/>
+							<TechStackLogo
+								href="https://www.typescriptlang.org"
+								linkType="TypeScript"
+							/>
+							<TechStackLogo
+								href="https://tailwindcss.com"
+								linkType="TailwindCSS"
+							/>
+							<TechStackLogo
+								href="https://www.cloudflare.com"
+								linkType="Cloudflare"
+							/>
+						</Fragment>
+					</WorkShowcase>
+				</li>
+				<li>
+					<WorkShowcase title="AI Frame" href="https://apps.apple.com/ja/app/ai-frame-art-on-widget/id6740455268">
+						<Fragment slot="description">
+							iOS App that lets you display AI-generated art on your home screen.
+						</Fragment>
+						<Fragment slot="tech-stacks">
+							<TechStackLogo
+								href="https://developer.apple.com/jp/swift"
+								linkType="Swift"
+							/>
+							<TechStackLogo
+								href="https://developer.apple.com/jp/xcode-cloud"
+								linkType="XcodeCloud"
+							/>
+						</Fragment>
+					</WorkShowcase>
+				</li>
+			</ul>
+		</div>
 	</SectionLayout>
 	<SectionLayout title="Contact">
 		<div
-			class="text-md lg:text-xl text-white font-roboto font-normal italic mt-4"
+			class="xl:w-2/4 mx-auto text-md lg:text-xl text-white font-roboto font-normal italic mt-4"
 		>
 			<p>
 				Feel free to contact me via
