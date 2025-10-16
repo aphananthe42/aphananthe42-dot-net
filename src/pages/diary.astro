@@ -15,7 +15,7 @@ const diaryEntries = await getCollection("diary");
         {
             diaryEntries.map((entry) => (
                 <div class="border border-white rounded-xl p-3 mt-4">
-                    <a href={`/diary/${entry.slug}`}>
+                    <a href={`/diary/${entry.id}`}>
                         <p class="text-white text-lg">{entry.data.title}</p>
                         <p class="text-white text-right">
                             {entry.data.date.toISOString().slice(0, 10)}
