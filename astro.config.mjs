@@ -1,13 +1,13 @@
 import { defineConfig } from 'astro/config';
 import sitemap from "@astrojs/sitemap";
-import tailwind from "@astrojs/tailwind";
 import rlc from 'remark-link-card'
 import rehypeRaw from 'rehype-raw'
 import rehypeExternalLinks from 'rehype-external-links'
+import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: "https://aphananthe42.net",
-  integrations: [sitemap(), tailwind()],
+  integrations: [sitemap()],
   markdown: {
     remarkPlugins: [
       [
@@ -22,5 +22,8 @@ export default defineConfig({
         { target: '_blank' },
       ],
     ],
+  },
+  vite: {
+    plugins: [tailwindcss()],
   },
 });
