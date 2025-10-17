@@ -1,6 +1,6 @@
 @import "tailwindcss";
-@theme {
+/* @theme {
   --font-roboto: 'Roboto', 'sans-serif';
   --font-notosansjp: 'Noto Sans JP', "sans-serif";
-}
+} */
 @plugin '@tailwindcss/typography';
