@@ -13,16 +13,18 @@ const diaryEntries = await getCollection("diary");
         endColor="to-[#f761a1]"
     >
         {
-            diaryEntries.map((entry) => (
-                <div class="border border-white rounded-xl p-3 mt-4">
-                    <a href={`/diary/${entry.id}`}>
-                        <p class="text-white text-lg">{entry.data.title}</p>
-                        <p class="text-white text-right">
-                            {entry.data.date.toISOString().slice(0, 10)}
-                        </p>
-                    </a>
-                </div>
-            ))
+            diaryEntries
+                .sort((a, b) => (b.data.date as Date).getTime() - (a.data.date as Date).getTime())
+                .map((entry) => (
+                    <div class="border border-white rounded-xl p-3 mt-4">
+                        <a href={`/diary/${entry.id}`}>
+                            <p class="text-white text-lg">{entry.data.title}</p>
+                            <p class="text-white text-right">
+                                {entry.data.date.toISOString().slice(0, 10)}
+                            </p>
+                        </a>
+                    </div>
+                ))
         }
     </EntryListLayout>
 </BaseLayout>
