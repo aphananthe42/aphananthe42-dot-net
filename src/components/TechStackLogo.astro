@@ -26,7 +26,11 @@ const icon = (() => {
 })();
 ---
 
-<a href={href} target="_blank" class="inline-block">
+<a
+  href={href}
+  target="_blank"
+  class="inline-block transition-transform duration-200 hover:-translate-y-1 hover:opacity-80"
+>
     <img
         class="h-5 xl:h-7"
         src={icon}

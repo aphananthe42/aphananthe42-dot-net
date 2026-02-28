@@ -3,6 +3,7 @@ import { Image } from "astro:assets";
 import MainIcon from "../images/main_icon.png";
 import BaseLayout from "../layouts/BaseLayout.astro";
 import SectionLayout from "../layouts/SectionLayout.astro";
+import Separator from "../components/Separator.astro";
 import LinkLogo from "../components/LinkLogo.astro";
 import WorkShowcase from "../components/WorkShowcase.astro";
 import TechStackLogo from "../components/TechStackLogo.astro";
@@ -29,15 +30,18 @@ import TechStackLogo from "../components/TechStackLogo.astro";
 		/>
 	</div>
 	<div class="flex justify-center mt-6 lg:mt-12">
-		<a href="/diary/">
-			<p class="text-xl lg:text-3xl text-blue-500 font-roboto font-bold">
-				$ cd ~/diary
-			</p>
-		</a>
+    	<a href="/diary/" class="group relative inline-block px-5 py-2 border-2 border-zinc-700 rounded-md transition-all duration-300 hover:border-zinc-200">
+        	<p class="text-xl lg:text-3xl text-zinc-300 font-mono font-bold group-hover:text-white flex items-center gap-1">
+            	<span class="text-zinc-500">$</span>
+				cd ~/diary
+            	<span class="w-2.5 h-6 lg:h-8 bg-zinc-300 group-hover:bg-white animate-pulse ml-1"></span>
+        	</p>
+    	</a>
 	</div>
+	<Separator/>
 	<SectionLayout title="Works">
 		<div class="xl:w-2/4 mx-auto">
-			<ul class="list-disc marker:text-white ml-4">
+			<ul class="list-disc marker:text-white ml-4 space-y-12">
 				<li>
 					<WorkShowcase
 						title="aphananthe42.net"
@@ -91,9 +95,10 @@ import TechStackLogo from "../components/TechStackLogo.astro";
 			</ul>
 		</div>
 	</SectionLayout>
+	<Separator/>
 	<SectionLayout title="Contact">
 		<div
-			class="xl:w-2/4 mx-auto text-md lg:text-xl text-white font-roboto font-normal italic mt-4"
+			class="xl:w-2/4 mx-auto text-md lg:text-xl text-white font-roboto font-normal mt-4"
 		>
 			<p>
 				Feel free to contact me via

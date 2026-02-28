@@ -26,7 +26,11 @@ const icon = (() => {
 })();
 ---
 
-<a href={href} target="_blank" class="inline-block">
+<a
+  href={href}
+  target="_blank"
+  class="inline-block transition-transform duration-200 hover:-translate-y-1 hover:opacity-80 hover:drop-shadow-[0_5px_15px_rgba(255,255,255,0.2)]"
+>
     <Image
         class="w-9 lg:w-16 aspect-square"
         src={icon}
