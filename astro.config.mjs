@@ -1,4 +1,5 @@
 import { defineConfig, fontProviders } from 'astro/config';
+import { unified } from '@astrojs/markdown-remark';
 import sitemap from "@astrojs/sitemap";
 import rlc from 'remark-link-card'
 import rehypeRaw from 'rehype-raw'
@@ -15,19 +16,21 @@ export default defineConfig({
     plugins: [tailwindcss()],
   },
   markdown: {
-    remarkPlugins: [
-      [
-        rlc,
-        { shortenUrl: true },
+    processor: unified({
+      remarkPlugins: [
+        [
+          rlc,
+          { shortenUrl: true },
+        ],
       ],
-    ],
-    rehypePlugins: [
-      rehypeRaw,
-      [
-        rehypeExternalLinks,
-        { target: '_blank' },
+      rehypePlugins: [
+        rehypeRaw,
+        [
+          rehypeExternalLinks,
+          { target: '_blank' },
+        ],
       ],
-    ],
+    }),
   },
   fonts: [
     {
