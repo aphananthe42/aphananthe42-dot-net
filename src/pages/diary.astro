@@ -7,19 +7,21 @@ const diaryEntries = await getCollection("diary");
 ---
 
 <BaseLayout>
-    <EntryListLayout
-        title="Diary"
-        startColor="from-[#8c1bab]"
-        endColor="to-[#f761a1]"
-    >
+    <EntryListLayout title="Diary">
         {
             diaryEntries
-                .sort((a, b) => (b.data.date as Date).getTime() - (a.data.date as Date).getTime())
+                .sort(
+                    (a, b) =>
+                        (b.data.date as Date).getTime() -
+                        (a.data.date as Date).getTime(),
+                )
                 .map((entry) => (
-                    <div class="border border-white rounded-xl p-3 mt-4">
-                        <a href={`/diary/${entry.id}`}>
-                            <p class="text-white text-lg">{entry.data.title}</p>
-                            <p class="text-white text-right">
+                    <div class="mt-4 rounded-xl border border-outline bg-surface p-3 transition-colors duration-200 hover:border-outline-hover hover:bg-surface-hover">
+                        <a href={`/diary/${entry.id}`} class="block">
+                            <p class="text-lg text-fg-strong">
+                                {entry.data.title}
+                            </p>
+                            <p class="text-right text-fg-body">
                                 {entry.data.date.toISOString().slice(0, 10)}
                             </p>
                         </a>

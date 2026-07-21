@@ -1,13 +1,16 @@
 ---
-const { title, startColor, endColor } = Astro.props;
+const { title } = Astro.props;
 ---
 
 <h1
-    class="text-white text-3xl lg:text-6xl text-center font-roboto-tw font-bold mt-9 lg:mt-20"
+    class="text-fg text-3xl lg:text-6xl text-center font-roboto-tw font-bold mt-9 lg:mt-20"
 >
     {title}
 </h1>
-<div class=`h-1 bg-gradient-to-r ${startColor} ${endColor} mt-4 lg:mt-8`></div>
-<div class="xl:w-1/5 mx-auto font-notosansjp-tw px-6 my-10">
+<div
+    class="w-4/5 lg:w-1/4 mx-auto mt-4 lg:mt-8 border-t-2 border-outline rounded-full"
+>
+</div>
+<div class="xl:w-2/5 mx-auto font-notosansjp-tw px-6 my-10">
     <slot />
 </div>

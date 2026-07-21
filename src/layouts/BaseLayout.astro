@@ -5,9 +5,15 @@ import "../styles/global.css";
 const canonicalURL = new URL(Astro.url.pathname, "https://aphananthe42.net");
 const ogpImageURL = new URL("/ogp.png", canonicalURL);
 const websiteTitle = "aphananthe42.net";
+type Locale = "en" | "ja";
+interface Props {
+    locale?: Locale;
+    showLanguageSwitcher?: boolean;
+}
+const { locale = "en", showLanguageSwitcher = false } = Astro.props;
 ---
 
-<html lang="ja">
+<html lang={locale}>
     <head prefix="og: https://ogp.me/ns#">
         <meta charset="utf-8" />
         <meta name="description" content="aphananthe42's personal website" />
@@ -30,12 +36,45 @@ const websiteTitle = "aphananthe42.net";
         <Font cssVariable="--font-roboto" preload />
         <Font cssVariable="--font-notosansjp" preload />
     </head>
-    <body class="w-screen min-h-screen flex flex-col bg-gray-800">
+    <body class="page-grid w-screen min-h-screen flex flex-col bg-page">
         <header>
-            <div class="p-3">
-                <a href="/" class="text-white font-roboto-tw font-bold">
+            <div class="flex items-center justify-between p-3">
+                <a
+                    href={locale === "ja" ? "/ja/" : "/"}
+                    class="text-fg font-roboto-tw font-bold"
+                >
                     aphananthe42.net
                 </a>
+                {
+                    showLanguageSwitcher && (
+                        <nav
+                            class="mr-3 flex items-center gap-1 font-roboto-tw text-sm"
+                            aria-label="Language"
+                        >
+                            <a
+                                href="/"
+                                class={
+                                    locale === "en"
+                                        ? "text-fg"
+                                        : "text-fg-muted hover:text-fg"
+                                }
+                            >
+                                EN
+                            </a>
+                            <span class="text-fg-muted">/</span>
+                            <a
+                                href="/ja/"
+                                class={
+                                    locale === "ja"
+                                        ? "text-fg"
+                                        : "text-fg-muted hover:text-fg"
+                                }
+                            >
+                                JA
+                            </a>
+                        </nav>
+                    )
+                }
             </div>
         </header>
         <main class="flex-grow">
@@ -44,9 +83,9 @@ const websiteTitle = "aphananthe42.net";
         <footer class="h-14 mt-10 lg:mt-20 mb-0">
             <hr />
             <p
-                class="text-white text-sm lg:text-lg text-center font-roboto-tw font-normal p-6 lg:p-16"
+                class="text-fg text-sm lg:text-lg text-center font-roboto-tw font-normal p-6 lg:p-16"
             >
-                © 2024 aphananthe42
+                © 2026 aphananthe42
             </p>
         </footer>
     </body>

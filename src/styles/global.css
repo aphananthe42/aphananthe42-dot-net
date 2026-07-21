@@ -4,7 +4,26 @@
   --font-notosansjp-tw: var(--font-notosansjp);
 }
 @theme {
+  --color-page: #1f2937;
+  --color-surface: rgb(24 24 27 / 0.3);
+  --color-surface-hover: #27272a;
+  --color-outline: #3f3f46;
+  --color-outline-emphasis: #52525b;
+  --color-outline-hover: #71717a;
+  --color-fg: #ffffff;
+  --color-fg-strong: #f4f4f5;
+  --color-fg-body: #d4d4d8;
+  --color-fg-muted: #a1a1aa;
+  --color-fg-tag: #e4e4e7;
+  --color-link: #60a5fa;
+  --color-link-hover: #93c5fd;
+  --color-focus: #d4d4d8;
+  --color-grid-dot: rgb(161 161 170 / 0.05);
   --animate-text-focus-in: text-focus-in 1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+.page-grid {
+  background-image: radial-gradient(var(--color-grid-dot) 1px, transparent 1px);
+  background-size: 20px 20px;
 }
 @keyframes text-focus-in {
   0% {

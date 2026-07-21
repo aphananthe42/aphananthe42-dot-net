@@ -7,6 +7,9 @@ import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
   site: "https://aphananthe42.net",
+  redirects: {
+    "/en/": "/",
+  },
   integrations: [sitemap()],
   vite: {
     plugins: [tailwindcss()],

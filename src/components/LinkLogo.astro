@@ -27,12 +27,14 @@ const icon = (() => {
 ---
 
 <a
-  href={href}
-  target="_blank"
-  class="inline-block transition-transform duration-200 hover:-translate-y-1 hover:opacity-80 hover:drop-shadow-[0_5px_15px_rgba(255,255,255,0.2)]"
+    href={href}
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label={`${linkType}を新しいタブで開く`}
+  class="group flex h-12 w-12 items-center justify-center rounded-full border border-outline bg-surface transition-colors duration-200 hover:border-outline-hover hover:bg-surface-hover focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-focus lg:h-20 lg:w-20"
 >
     <Image
-        class="w-9 lg:w-16 aspect-square"
+        class="h-6 w-6 object-contain opacity-80 transition-opacity duration-200 group-hover:opacity-100 lg:h-10 lg:w-10"
         src={icon}
         alt={`${linkType}のアイコン`}
     />
