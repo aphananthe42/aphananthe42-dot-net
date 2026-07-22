@@ -1,5 +1,4 @@
 export const ja = {
-  sections: { about: "About", works: "Works", diary: "Diary", contact: "Contact" },
   about: {
     role: "フリーランスiOSエンジニア",
     bioIntro: "iOSアプリを作る仕事をしています。",
@@ -12,5 +11,4 @@ export const ja = {
   },
   works: { site: "この個人サイトです。", app: "AIで生成した画像をホーム画面のウィジェットに表示できるiOSアプリです。" },
   diary: { viewAll: "日記一覧を見る" },
-  contact: { email: "Email:", x: "X:", dm: "DM on X", pgp: "PGP Key" },
 };

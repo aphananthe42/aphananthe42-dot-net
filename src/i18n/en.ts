@@ -1,5 +1,4 @@
 export const en = {
-  sections: { about: "About", works: "Works", diary: "Diary", contact: "Contact" },
   about: {
     role: "Freelance iOS Engineer",
     bioIntro: "I work on iOS app development.",
@@ -12,5 +11,4 @@ export const en = {
   },
   works: { site: "aphananthe42.net is my personal website.", app: "iOS App that lets you display AI-generated art on your home screen." },
   diary: { viewAll: "View all diary" },
-  contact: { email: "Email:", x: "X:", dm: "DM on X", pgp: "PGP Key" },
 };

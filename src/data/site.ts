@@ -1,13 +1,18 @@
 export const site = {
     name: "aphananthe42",
-    email: "contact@aphananthe42.net",
-    mbti: "INTJ-A",
     socialLinks: [
         { href: "https://github.com/aphananthe42", linkType: "GitHub" },
         { href: "https://x.com/aphananthe42", linkType: "X" },
         { href: "https://zenn.dev/aphananthe42", linkType: "Zenn" },
         { href: "https://atcoder.jp/users/aphananthe42", linkType: "AtCoder" },
     ],
+    sections: {
+        about: "About",
+        works: "Works",
+        diary: "Diary",
+        contact: "Contact",
+    },
+    mbti: "INTJ-A",
     works: [
         {
             id: "site",
@@ -22,4 +27,11 @@ export const site = {
             tags: ["Swift", "SwiftUI", "TCA", "Xcode Cloud", "Firebase"],
         },
     ],
+    contact: {
+        email: "Email: ",
+        x: "X: ",
+        dm: "DM on X",
+        pgp: "PGP Key",
+    },
+    email: "contact@aphananthe42.net",
 } as const;

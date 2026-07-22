@@ -36,7 +36,7 @@ const workDescriptions = { site: t.works.site, app: t.works.app };
     </div>
 </section>
 <Separator />
-<SectionLayout title={t.sections.about}
+<SectionLayout title={site.sections.about}
     ><div
         class="mt-4 text-[15px] lg:text-xl text-fg font-notosansjp-tw"
     >
@@ -103,7 +103,7 @@ const workDescriptions = { site: t.works.site, app: t.works.app };
     </div></SectionLayout
 >
 <Separator />
-<SectionLayout title={t.sections.works}
+<SectionLayout title={site.sections.works}
     ><div class="mt-4 space-y-4">
         {site.works.map((work) => (
             <WorkCard title={work.title} href={work.href}>
@@ -116,7 +116,7 @@ const workDescriptions = { site: t.works.site, app: t.works.app };
     </div></SectionLayout
 >
 <Separator />
-<SectionLayout title={t.sections.diary}
+<SectionLayout title={site.sections.diary}
     ><div class="mt-4">
         <ul class="space-y-3">
             {
@@ -151,29 +151,29 @@ const workDescriptions = { site: t.works.site, app: t.works.app };
     </div></SectionLayout
 >
 <Separator />
-<SectionLayout title={t.sections.contact}
+<SectionLayout title={site.sections.contact}
     ><div
         class="mt-4 space-y-2 font-roboto-tw text-base lg:text-xl"
     >
         <p>
-            <span class="text-fg-muted">{t.contact.email}</span>
+            <span class="text-fg-muted">{site.contact.email}</span>
             <a
                 href={`mailto:${site.email}`}
                 class="font-bold text-link underline decoration-link/50 underline-offset-4 hover:text-link-hover"
                 >{site.email}</a
             >
         </p><p>
-            <span class="text-fg-muted">{t.contact.x}</span>
+            <span class="text-fg-muted">{site.contact.x}</span>
             <a
                 href={site.socialLinks[1].href}
                 class="font-bold text-link underline decoration-link/50 underline-offset-4 hover:text-link-hover"
-                >{t.contact.dm}</a
+                >{site.contact.dm}</a
             >
         </p><p class="pt-1 text-sm lg:text-base">
             <a
                 href="/pgp"
                 class="text-fg-muted underline decoration-outline-hover/60 underline-offset-4 hover:text-fg-tag"
-                >{t.contact.pgp}</a
+                >{site.contact.pgp}</a
             >
         </p>
     </div></SectionLayout
