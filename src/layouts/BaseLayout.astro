@@ -1,11 +1,11 @@
 ---
 import { Font } from "astro:assets";
 import "../styles/global.css";
+import type { Locale } from "../i18n";
 
 const canonicalURL = new URL(Astro.url.pathname, "https://aphananthe42.net");
 const ogpImageURL = new URL("/ogp.png", canonicalURL);
 const websiteTitle = "aphananthe42.net";
-type Locale = "en" | "ja";
 interface Props {
     locale?: Locale;
     showLanguageSwitcher?: boolean;
