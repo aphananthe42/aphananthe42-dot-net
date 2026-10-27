@@ -21,7 +21,7 @@ export const site = {
             tags: ["Astro", "TypeScript", "Tailwind CSS", "Cloudflare"],
         },
         {
-            id: "app",
+            id: "aiFrame",
             title: "AI Frame",
             href: "https://apps.apple.com/ja/app/ai-frame-art-on-widget/id6740455268",
             tags: ["Swift", "SwiftUI", "TCA", "Xcode Cloud", "Firebase"],

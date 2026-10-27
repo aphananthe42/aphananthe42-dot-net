@@ -9,6 +9,6 @@ export const en = {
     certificationsList: ["TOEIC 860", "Certified ScrumMaster (CSM)", "AWS Certified Cloud Practitioner", "AWS Certified Developer", "AWS Certified SysOps Administrator", "JDLA Deep Learning for GENERAL (G Certification)"],
     languagesList: ["Japanese", "English"],
   },
-  works: { site: "aphananthe42.net is my personal website.", app: "iOS App that lets you display AI-generated art on your home screen." },
+  works: { site: "aphananthe42.net is my personal website.", aiFrame: "iOS App that lets you display AI-generated art on your home screen.", discontinued: "🛑 Service discontinued" },
   diary: { viewAll: "View all diary" },
 };

@@ -2,9 +2,10 @@
 interface Props {
     title: string;
     href: string;
+    isAiFrame?: boolean;
 }
 
-const { title, href } = Astro.props;
+const { title, href, isAiFrame = false } = Astro.props;
 ---
 
 <article class="rounded-lg border border-outline bg-surface p-5 lg:p-6">
@@ -14,8 +15,15 @@ const { title, href } = Astro.props;
         rel="noopener noreferrer"
         class="font-roboto-tw text-lg font-bold text-link underline decoration-link/50 underline-offset-4 transition-colors duration-200 hover:text-link-hover lg:text-2xl"
     >
-        {title}
+        {isAiFrame ? <s>{title}</s> : title}
     </a>
+    {
+        isAiFrame && (
+            <span class="ml-2 text-base font-normal text-fg-body lg:text-lg">
+                <slot name="status" />
+            </span>
+        )
+    }
     <p class="mt-3 text-base text-fg-body lg:text-xl">
         <slot name="description" />
     </p>

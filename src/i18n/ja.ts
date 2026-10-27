@@ -9,6 +9,6 @@ export const ja = {
     certificationsList: ["TOEIC 860", "認定スクラムマスター（CSM）", "AWS認定 Cloud Practitioner", "AWS認定 Developer", "AWS認定 SysOps Administrator", "JDLA Deep Learning for GENERAL（G検定）"],
     languagesList: ["日本語", "英語"],
   },
-  works: { site: "この個人サイトです。", app: "AIで生成した画像をホーム画面のウィジェットに表示できるiOSアプリです。" },
+  works: { site: "この個人サイトです。", aiFrame: "AIで生成した画像をホーム画面のウィジェットに表示できるiOSアプリです。", discontinued: "🛑 サービス終了済み" },
   diary: { viewAll: "日記一覧を見る" },
 };
